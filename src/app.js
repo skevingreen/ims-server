@@ -22,7 +22,7 @@ const suppliersRouter = require('./routes/suppliers');
 let app = express();
 
 // Mongoose connection
-const connectionString = 'mongodb+srv://ims_user:s3cret@bellevueuniversity.qgo4d.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity';
+const connectionString = process.env.DB_CONN || 'mongodb+srv://ims_user:s3cret@bellevueuniversity.qgo4d.mongodb.net/?retryWrites=true&w=majority&appName=BellevueUniversity';
 const dbName = 'IMS'; // Database name
 
 // Function to connect to the database
